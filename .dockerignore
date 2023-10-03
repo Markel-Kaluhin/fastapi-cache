@@ -1,0 +1,9 @@
+.dockerignore
+.git
+.gitignore
+.idea
+.pre-commit-config.yaml
+.pylintrc
+alembic.ini
+Dockerfile*
+wait
