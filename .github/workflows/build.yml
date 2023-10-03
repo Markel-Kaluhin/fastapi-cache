@@ -50,7 +50,7 @@ jobs:
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: e8d23650144c1dd611a941789d52721a
-        filename: python-bootstrap-template__linters_passed.json
+        filename: fastapi-cache__linters_passed.json
         label: Linters
         message: ${{ env.LINTERS_PASSED && 'PASSED' || 'FAILED' }}
         namedLogo: python
@@ -63,7 +63,7 @@ jobs:
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: e8d23650144c1dd611a941789d52721a
-        filename: python-bootstrap-template__tests_passed.json
+        filename: fastapi-cache__tests_passed.json
         label: Tests
         message: ${{ env.TESTS_PASSED && 'PASSED' || 'FAILED' }}
         namedLogo: pytest
@@ -76,7 +76,7 @@ jobs:
       with:
         auth: ${{ secrets.GIST_SECRET }}
         gistID: e8d23650144c1dd611a941789d52721a
-        filename: python-bootstrap-template__coverage.json
+        filename: fastapi-cache__coverage.json
         label: Lines Coverage
         message: ${{ env.COVERAGE }}
         namedLogo: pytest
