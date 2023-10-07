@@ -15,6 +15,9 @@ pytest = "==7.4.2"
 black = "==23.9.1"
 
 [packages]
+fastapi = "*"
+httpx = "*"
+fastapi-utils = "*"
 
 [pipenv]
 allow_prereleases = true

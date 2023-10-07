@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 from functools import wraps
 from typing import Any, Callable, Coroutine, Dict, Optional, ParamSpec, Tuple, TypeVar
+from fastapi.dependencies.utils import get_typed_signature, get_typed_return_annotation, get_typed_annotation
 
 P = ParamSpec("P")
 R = TypeVar("R")
@@ -53,6 +54,9 @@ class Cache:
         def decorator(func: TFunc) -> TWrappedFunk:
             @wraps(func)
             async def wrapper(*args: Tuple[Any], **kwargs: Any | None) -> Any:
+                # typed_signature = get_typed_signature(func)
+                # typed_return_annotation = get_typed_return_annotation(func)
+                # typed_annotation = get_typed_annotation(func)
                 key_payload = CacheKeyPayload(
                     namespace=kwargs.get("self").base_route,
                     query_string=json.loads(kwargs.get("request").query_params.get("list_request"))
